@@ -1,0 +1,142 @@
+/* styles.css */
+
+/* Apply font globally */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Cormorant Garamond', serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Intro Section */
+.home-page #intro {
+    background: url('../images/bdata.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.webdev-page #intro {
+    background: url('../images/webbg.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+#intro {
+    position: relative;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Dark Overlay for Readability */
+#intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 0;
+}
+
+/* Ensure content appears above the overlay */
+#intro h1,
+#intro p,
+#intro a {
+    position: relative;
+    z-index: 1;
+}
+
+/* Headline Styling */
+#intro h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+#intro p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-style: normal !important; /* Ensures it overrides any inherited styles */
+    font-weight: 400; /* Adjust weight to normal */
+}
+
+/* Link Styling */
+#intro a {
+    color: #f39c12; /* Highlight color */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#intro a:hover {
+    color: #ffcc00; /* Lighter shade on hover */
+}
+/* Profile Picture */
+#profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+#copyright {
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Tab Navigation */
+.links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+
+/*Modified tab code*/
+/* Default (Unselected) Tabs */
+.tab-link {
+    color: #ffffff; /* Normal text color */
+    background: transparent;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Selected (Active) Tab */
+.tab-link.active {
+    color: #000000; /* Change text color for active tab */
+    background: #ffffff; /* Highlight active tab */
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.tab-link:hover {
+    color: #f8f8f8;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
